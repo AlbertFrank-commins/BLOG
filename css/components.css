@@ -1,0 +1,305 @@
+/* Barra de búsqueda */
+.codex-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 0.75rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--parchment-border);
+}
+
+.scroll-search {
+  display: flex;
+  align-items: center;
+  background-color: var(--bg-deep);
+  border: 1px solid var(--parchment-border);
+  border-radius: 4px;
+  padding: 0.45rem 0.85rem;
+  flex: 1;
+  max-width: 440px;
+}
+
+.quill-icon {
+  color: var(--gold-old);
+  font-size: 1.1rem;
+  margin-right: 0.6rem;
+}
+
+.scroll-search input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--text-parchment);
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  width: 100%;
+}
+
+.manuscript-status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-serif-header);
+  font-size: 0.8rem;
+  color: var(--gold-old);
+}
+
+.wax-seal-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: var(--ink-red);
+}
+
+.wax-seal-dot.online {
+  background-color: #2e6930;
+}
+
+/* Encabezado del artículo */
+.entry-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.85rem;
+}
+
+.vellum-tag {
+  font-family: var(--font-serif-header);
+  font-size: 0.78rem;
+  background: rgba(201, 154, 78, 0.08);
+  color: var(--gold-burnished);
+  border: 1px solid var(--parchment-border);
+  border-radius: 3px;
+  padding: 0.2rem 0.6rem;
+}
+
+.manuscript-title {
+  font-family: var(--font-serif-header);
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  color: var(--gold-burnished);
+  line-height: 1.2;
+}
+
+.vintage-divider {
+  text-align: center;
+  color: var(--parchment-border);
+  font-size: 0.8rem;
+  letter-spacing: 4px;
+  margin: 1rem 0;
+  border-bottom: 1px solid var(--parchment-border);
+  padding-bottom: 0.75rem;
+}
+
+/* Escenario de la bandera: simple y limpio */
+.heraldic-chamber {
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
+.flag-portrait {
+  width: 100%;
+  min-height: 340px;
+  background-color: var(--bg-deep);
+  border: 1px solid var(--parchment-border);
+  border-radius: 4px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flag-portrait img {
+  max-width: 85%;
+  max-height: 280px;
+  object-fit: contain;
+  border-radius: 2px;
+}
+
+.caption-text {
+  font-size: 0.9rem;
+  font-style: italic;
+  color: var(--text-muted-parchment);
+  margin-top: 0.6rem;
+}
+
+/* Cuerpo de lectura */
+.prose-illuminated p {
+  margin-bottom: 1rem;
+  font-size: 1.15rem;
+  color: var(--text-parchment);
+}
+
+/* Ficha capitular minimalista */
+.parchment-ledger {
+  background: rgba(0, 0, 0, 0.2);
+  border-left: 2px solid var(--gold-old);
+  padding: 1.25rem;
+  margin: 1.75rem 0;
+}
+
+.ledger-title {
+  font-family: var(--font-serif-header);
+  font-size: 1.15rem;
+  color: var(--gold-burnished);
+  margin-bottom: 0.75rem;
+}
+
+.ledger-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.65rem;
+  font-size: 1rem;
+}
+
+.ledger-list strong {
+  color: var(--gold-old);
+  font-family: var(--font-serif-header);
+  font-size: 0.85rem;
+}
+
+/* Sección del mapa limpia */
+.parchment-map-chamber {
+  margin-top: 2rem;
+}
+
+.map-header-vintage {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--parchment-border);
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.85rem;
+}
+
+.map-title-vintage {
+  font-family: var(--font-serif-header);
+  font-size: 1.15rem;
+  color: var(--gold-burnished);
+}
+
+.map-subtitle-vintage {
+  font-size: 0.85rem;
+  color: var(--text-muted-parchment);
+}
+
+.compass-symbol {
+  font-size: 1.3rem;
+  color: var(--gold-old);
+}
+
+.antique-map-border {
+  width: 100%;
+  height: 340px;
+  border: 1px solid var(--parchment-border);
+  border-radius: 4px;
+  background-color: var(--bg-deep);
+  overflow: hidden;
+}
+
+.antique-map-border iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  filter: contrast(102%) brightness(95%);
+}
+
+/* Filtros por continente */
+.index-title {
+  font-family: var(--font-serif-header);
+  font-size: 1.2rem;
+  color: var(--gold-burnished);
+}
+
+.index-desc {
+  font-size: 0.85rem;
+  color: var(--text-muted-parchment);
+  margin-bottom: 0.85rem;
+}
+
+.continent-ribbons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-bottom: 1.25rem;
+}
+
+.ribbon-btn {
+  background: transparent;
+  border: 1px solid var(--parchment-border);
+  color: var(--text-muted-parchment);
+  font-family: var(--font-serif-header);
+  font-size: 0.75rem;
+  border-radius: 3px;
+  padding: 0.35rem 0.65rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.ribbon-btn:hover {
+  color: var(--gold-burnished);
+  border-color: var(--gold-old);
+}
+
+.ribbon-btn.active {
+  background: var(--gold-old);
+  color: #120e0c;
+  font-weight: 700;
+  border-color: var(--gold-old);
+}
+
+/* Lista lateral */
+.manuscript-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-height: 640px;
+  overflow-y: auto;
+  padding-right: 0.25rem;
+}
+
+.codex-entry-card {
+  display: flex;
+  gap: 0.75rem;
+  padding: 0.55rem;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  align-items: center;
+  transition: all 0.15s ease;
+}
+
+.codex-entry-card:hover {
+  background-color: rgba(255, 255, 255, 0.03);
+  border-color: var(--parchment-border);
+}
+
+.card-heraldry {
+  width: 50px;
+  height: 34px;
+  object-fit: cover;
+  border: 1px solid var(--parchment-border);
+  border-radius: 2px;
+}
+
+.card-details h4 {
+  font-family: var(--font-serif-header);
+  font-size: 0.9rem;
+  color: var(--text-parchment);
+  line-height: 1.2;
+}
+
+.card-details span {
+  font-size: 0.78rem;
+  color: var(--text-muted-parchment);
+  display: block;
+}
+
+.quill-loader {
+  font-family: var(--font-serif-header);
+  font-size: 0.9rem;
+  color: var(--gold-old);
+}

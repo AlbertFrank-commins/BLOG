@@ -1,0 +1,40 @@
+/* ==========================================================================
+   PALETA HISTÓRICA: Pergamino Envejecido, Tinta de Nuez, Oro Viejo y Cera
+   ========================================================================== */
+:root {
+  --bg-deep: #0f0d0b;
+  --bg-leather: #191411;
+  --parchment-dark: #211c17;
+  --parchment-sheet: #2a231d;
+  --parchment-border: #4a3d2e;
+  
+  --gold-old: #c99a4e;
+  --gold-burnished: #e4bc79;
+  --ink-red: #8b2626;
+  --ink-dark: #120e0c;
+  
+  --text-parchment: #ede4d1;
+  --text-muted-parchment: #a99d8d;
+
+  --font-royal: 'Cinzel Decorative', serif;
+  --font-serif-header: 'Cinzel', serif;
+  --font-body: 'EB Garamond', Garamond, Georgia, serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-deep);
+  color: var(--text-parchment);
+  font-family: var(--font-body);
+  font-size: 1.15rem;
+  line-height: 1.8;
+  padding: 2rem 1rem;
+  background-image: 
+    radial-gradient(circle at 50% 10%, rgba(201, 154, 78, 0.04) 0%, transparent 60%),
+    radial-gradient(circle at 80% 80%, rgba(139, 38, 38, 0.04) 0%, transparent 50%);
+}

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Códice Mundi &bull; Archivo de Expediciones y Cartografía Histórica</title>
+  
+  <!-- Tipografía Histórica: Cinzel (Titulares romanos) + EB Garamond (Cuerpo clásico) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Cinzel:wght@500;700;900&family=EB+Garamond:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+
+  <div class="antique-frame">
+    
+    <!-- ENCABEZADO DE CÓDICE -->
+    <header class="codex-header">
+      <div class="ornament-top">❦ &nbsp; ANNO DOMINI MMXXVI &nbsp; ❦</div>
+      <h1 class="codex-title">Códice Mundi</h1>
+      <p class="codex-subtitle">Registro Universal de Territorios, Enseñas Soberanas y Cartografía Náutica</p>
+      
+      <div class="codex-toolbar">
+        <div class="scroll-search">
+          <span class="quill-icon">✒</span>
+          <input type="text" id="searchInput" placeholder="Buscar manuscrito o comarca..." autocomplete="off">
+        </div>
+        <div class="manuscript-status">
+          <span id="statusIndicator" class="wax-seal-dot"></span>
+          <span id="statusText">Consultando archivos...</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- CUERPO PRINCIPAL DEL MANUSCRITO -->
+    <div class="codex-layout">
+      
+      <!-- COLUMNA PRINCIPAL: CRÓNICA HISTÓRICA -->
+      <main class="parchment-sheet">
+        <article class="manuscript-entry">
+          
+          <header class="entry-header">
+            <div class="entry-meta">
+              <span id="postRegion" class="vellum-tag">Dominio: --</span>
+              <span id="postSubregion" class="vellum-tag">Hemisferio: --</span>
+              <span id="postPopulation" class="vellum-tag">Censo: --</span>
+            </div>
+            <h2 id="postTitle" class="manuscript-title">Abriendo el Cuaderno de Bitácora...</h2>
+            <div class="vintage-divider">❖ &bull; ❖ &bull; ❖</div>
+          </header>
+
+          <!-- ESCENARIO DE LA ENSEÑA HISTÓRICA -->
+          <div class="heraldic-chamber">
+            <div id="imageWrapper" class="flag-portrait">
+              <div class="quill-loader">Desenrollando pergamino cartográfico...</div>
+            </div>
+            <p id="imageCaption" class="caption-text">Heráldica oficial custodiada en el archivo real</p>
+          </div>
+
+          <!-- CRÓNICA NARRATIVA -->
+          <div class="chronicle-body">
+            <div id="postDescription" class="prose-illuminated">
+              <p>Selecciona una comarca en el registro capitular lateral o suscribe una búsqueda para desplegar su historia, posición geográfica y monedas de cambio.</p>
+            </div>
+
+            <!-- FICHA TÉCNICA DE ARCHIVO -->
+            <div class="parchment-ledger">
+              <h3 class="ledger-title">Ficha Capitular & Decretos</h3>
+              <ul id="specsList" class="ledger-list">
+                <li><strong>Sede Capitular:</strong> --</li>
+                <li><strong>Lenguas del Pueblo:</strong> --</li>
+                <li><strong>Moneda Soberana:</strong> --</li>
+                <li><strong>Coordenadas Náuticas:</strong> --</li>
+              </ul>
+            </div>
+
+            <!-- VISOR CARTOGRÁFICO DE ÉPOCA -->
+            <section class="parchment-map-chamber">
+              <div class="map-header-vintage">
+                <div>
+                  <h3 class="map-title-vintage">Proyección y Declinación Cartográfica</h3>
+                  <span id="mapSubtitle" class="map-subtitle-vintage">Trazo topográfico en tiempo real</span>
+                </div>
+                <span class="compass-symbol">🧭</span>
+              </div>
+              
+              <div class="antique-map-border">
+                <iframe 
+                  id="mapFrame" 
+                  title="Atlas Náutico" 
+                  loading="lazy" 
+                  referrerpolicy="no-referrer"
+                  src="about:blank">
+                </iframe>
+              </div>
+            </section>
+
+          </div>
+        </article>
+      </main>
+
+      <!-- BARRA LATERAL: ÍNDICE DE EXPEDICIONES -->
+      <aside class="codex-index">
+        <div class="index-header">
+          <h3 class="index-title">Índice de Tierras</h3>
+          <p class="index-desc">Filtra por dominio continental o examina un pergamino:</p>
+          
+          <div class="continent-ribbons" id="regionFilters">
+            <button class="ribbon-btn active" data-region="all">Todos</button>
+            <button class="ribbon-btn" data-region="Americas">América</button>
+            <button class="ribbon-btn" data-region="Europe">Europa</button>
+            <button class="ribbon-btn" data-region="Asia">Asia</button>
+            <button class="ribbon-btn" data-region="Africa">África</button>
+            <button class="ribbon-btn" data-region="Oceania">Oceanía</button>
+          </div>
+        </div>
+
+        <div id="relatedList" class="manuscript-list">
+          <!-- Hojas inyectadas por JS -->
+        </div>
+      </aside>
+
+    </div>
+
+    <!-- PIE DE PÁGINA HISTÓRICO -->
+    <footer class="codex-footer">
+      <p class="colophon">Ex Bibliotheca Universalis &bull; Año del Señor 2026 &bull; Crónicas Geográficas e Históricas del Globo</p>
+    </footer>
+
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/mockData.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
